@@ -1,0 +1,2 @@
+<?php return; ?>
+<!-- Placeholder image file created by assistant -->

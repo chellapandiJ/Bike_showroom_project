@@ -1,0 +1,218 @@
+/* VENUM INSPIRED THEME */
+:root {
+    --primary-color: #ffcc00; /* Venom Yellow/Gold */
+    --secondary-color: #111; /* Deep Black */
+    --accent-color: #d32f2f; /* Aggressive Red */
+    --text-light: #f5f5f5;
+    --text-dark: #333;
+    --glass-bg: rgba(20, 20, 20, 0.9);
+    --card-bg: #1a1a1a;
+}
+
+body {
+    font-family: 'Teko', sans-serif; /* Aggressive, sporty font */
+    background-color: #000;
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: var(--primary-color) !important;
+    font-weight: bold;
+    text-shadow: 0 0 5px #000;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: skewX(-10deg);
+}
+
+/* Buttons */
+.btn-venum {
+    background-color: var(--primary-color);
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 25px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+}
+
+.btn-venum:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.btn-danger-venum {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: 2px solid var(--accent-color);
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+}
+
+.btn-danger-venum:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    color: var(--text-light);
+    border-radius: 0;
+    transition: transform 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(255, 204, 0, 0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: 0.5s;
+}
+
+.card:hover .card-img-top {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    background-color: #222;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 0;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #222;
+    border-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Table */
+.table-dark {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+.table-dark th {
+    background-color: #000;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+.table-dark td {
+    vertical-align: middle;
+}
+
+/* Login/Register Container */
+.auth-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/bg-bike.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.auth-box {
+    position: relative;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 40px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Dashboard Sidebar */
+.sidebar {
+    height: 100vh;
+    background-color: #111;
+    border-right: 1px solid #333;
+    padding-top: 20px;
+}
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    color: #aaa;
+    font-size: 1.1rem;
+    border-left: 3px solid transparent;
+}
+.sidebar a:hover, .sidebar a.active {
+    background-color: #222;
+    color: var(--primary-color);
+    border-left-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: #050505;
+    border-top: 3px solid var(--primary-color);
+    color: #777;
+    padding: 40px 0;
+}
+footer h5 {
+    color: var(--primary-color);
+}
