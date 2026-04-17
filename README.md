@@ -2,7 +2,7 @@
 
 A professional, full-stack web application for managing a modern bike showroom. Built with PHP, MySQL, and Bootstrap 5.
 
-## 🚀 Features
+## Features
 
 ### Customer Panel
 - **Browse Bikes**: Filter by brand, category, check details.
@@ -23,7 +23,7 @@ A professional, full-stack web application for managing a modern bike showroom. 
 - **Inventory**: Check stock levels (Limited update access).
 - **Test Rides**: Approve/Reject test ride requests.
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 1.  **Database Setup**:
     - Open **phpMyAdmin**.
@@ -41,12 +41,12 @@ A professional, full-stack web application for managing a modern bike showroom. 
     - Place the folder in `xampp/htdocs`.
     - Open browser and go to `http://localhost/bikeshowroom`.
 
-## 📂 Project Structure
+## Project Structure
 - `/admin` - Admin specific modules
 - `/staff` - Staff specific modules
 - `/includes` - Reusable components (DB, Header, Function)
 - `/uploads` - Stores bike images
 - `/assets` - CSS, JS, and static images
 
-## 🎓 Note for Evaluators
+## Note for Evaluators
 This project implements MVC-like structure, proper security (password hashing, prepared statements), and Role-Based Access Control (RBAC).
